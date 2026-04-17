@@ -32,7 +32,7 @@ export default function DashboardLayout({
       try {
         const { data: bizData } = await supabase
           .from('businesses')
-          .select('name, logo, slug')
+          .select('*')
           .eq('owner_id', user.id)
           .maybeSingle()
 

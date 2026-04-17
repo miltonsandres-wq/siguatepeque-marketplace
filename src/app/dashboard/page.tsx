@@ -49,7 +49,7 @@ export default function DashboardProfilePage() {
       setUserId(user.id)
 
       // Load categories
-      const { data: catData } = await supabase.from('categories').select('id, name, icon').order('name')
+      const { data: catData } = await supabase.from('categories').select('*').order('name')
       if (catData) setCategories(catData)
 
       // Load business

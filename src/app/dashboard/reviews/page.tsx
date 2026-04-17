@@ -26,7 +26,7 @@ export default function DashboardReviewsPage() {
       // Load business
       const { data: bizData } = await supabase
         .from('businesses')
-        .select('id, name, rating, review_count')
+        .select('*')
         .eq('owner_id', user.id)
         .single()
 

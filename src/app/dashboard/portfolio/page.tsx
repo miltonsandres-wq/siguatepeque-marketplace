@@ -26,7 +26,7 @@ export default function DashboardPortfolioPage() {
       // Load business
       const { data: bizData } = await supabase
         .from('businesses')
-        .select('id, name')
+        .select('*')
         .eq('owner_id', user.id)
         .single()
 
